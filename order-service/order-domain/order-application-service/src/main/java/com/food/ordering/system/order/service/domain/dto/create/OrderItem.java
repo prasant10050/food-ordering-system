@@ -1,24 +1,23 @@
 package com.food.ordering.system.order.service.domain.dto.create;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
-import lombok.NonNull;
 
 import java.math.BigDecimal;
-import java.util.List;
 import java.util.UUID;
 
 @Getter
 @Builder
 @AllArgsConstructor
 public class OrderItem {
-    @NonNull
+    @NotNull
     private final UUID productId;
-    @NonNull
+    @NotNull
     private final Integer quantity;
-    @NonNull
+    @NotNull
     private final BigDecimal price;
-    @NonNull
+    @NotNull
     private final BigDecimal subTotal;
 }
